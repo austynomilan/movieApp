@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Poster from './Header/posters/poster'
 import './App.css'
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
 
   return (
     <>
-      
+      <Poster />
     </>
   )
 }
