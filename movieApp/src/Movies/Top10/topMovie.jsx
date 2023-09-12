@@ -1,8 +1,13 @@
-import React, {useState, useEffect} from 'react';
-import './topMovie.scss'
+import React, { useState, useEffect } from 'react';
+import './topMovie.scss';
+import MovieCard from '../../assets/icons/MovieCard.png';
+import { FaGreaterThan } from 'react-icons/fa';
+import Footer from '../../Footer/footer';
+import Fruit from '../../assets/icons/fruit.png';
 
 export default function topMovie() {
   const [movies, setMovies] = useState([]);
+  const [genres, setGenres] = useState([]);
 
   useEffect(() => {
     const options = {
@@ -15,24 +20,72 @@ export default function topMovie() {
     };
 
     fetch(
-      'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1',
+      'https://api.themoviedb.org/3/movie/popular?language=en-US&page=1',
       options
     )
       .then((response) => response.json())
-      .then((data) => setMovies(data.results))
+      .then((data) => setMovies(data.results.slice(0, 10)))
       .catch((err) => console.error(err));
 
-      
+    fetch('https://api.themoviedb.org/3/genre/movie/list?language=en', options)
+      .then((response) => response.json())
+      .then((data) => setGenres(data.genres))
+      .catch((err) => console.error(err));
   }, []);
-  console.log(movies)
+  console.log(movies);
+  console.log(genres);
   return (
-    <div className='movieContainer'>
-      {movies.map((movie) => (
-        <div key={movie.id} >
-        <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />
-          <p>{movie.title}</p>
-          </div>
-      ))}
-    </div>
+    <>
+      <div className='intro'>
+        <h1>Featured Movie</h1>
+        <span>
+          <p>See more</p>
+          <FaGreaterThan color='#BE123C' />
+        </span>
+      </div>
+      <div data-testid: movie-card className='card'>
+        {movies.map((movie) => {
+          const genreNames = movie.genre_ids.map((genreId) => {
+            const genre = genres.find((genre) => genre.id === genreId);
+            return genre ? genre.name : '';
+          });
+          const releaseYear = new Date(movie.release_date).getFullYear();
+          return (
+            <div key={movie.id} className='posterHolder'>
+              <img
+                src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+                alt={movie.title}
+                width={250}
+                height={370}
+                p={5}
+                data-testid: movie-poster
+              />
+              
+              <span data-testid: movie-release-date className='yearRelease'>
+                <p>USA,</p>
+                <h4>{releaseYear}</h4>
+              </span>
+              <span>
+              <p data-testid: movie-title>{movie.title}</p>
+              </span>
+              <div className='userGenerated'>
+                <section className='avgCount'>
+                  <img src={MovieCard} alt='IMDB' />
+                  {movie.vote_count}
+                </section>
+                <section className='avgCount'>
+                  <img src={Fruit} alt='fruit' />
+                  {movie.vote_average}
+                </section>
+              </div>
+              <span className='genre'>
+                <p>{genreNames.join(', ')}</p>
+              </span>
+            </div>
+          );
+        })}
+      </div>
+      <Footer />
+    </>
   );
 }
