@@ -27,6 +27,7 @@ export default function footer() {
           <li><a href="#">PressRoom</a></li>
         </ul>
         </div>
+        
         <span>
             <FaRegCopyright /><p>2023 MovieBox by Augustine Odoh</p>
         </span>
