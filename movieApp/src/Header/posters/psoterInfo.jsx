@@ -1,5 +1,5 @@
 import React from 'react';
-import MovieCard from '../../assets/icons/MovieCard.png';
+import MovieCard from '../../assets/icons/movieCard.png';
 import Fruit from '../../assets/icons/fruit.png';
 import './posterInfo.scss'
 
