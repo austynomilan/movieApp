@@ -1,7 +1,7 @@
 import React from 'react'
 import './poster.scss'
 import Image from '../../assets/posters/Poster.png'
-import Nav from '../nav'
+import Nav from '../Nav'
 import PosterInfo from './psoterInfo'
 
 export default function poster() {
