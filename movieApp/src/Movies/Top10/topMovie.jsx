@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './topMovie.scss';
 import MovieCard from '../../assets/icons/MovieCard.png';
 import { FaGreaterThan } from 'react-icons/fa';
@@ -20,7 +21,7 @@ export default function topMovie() {
     };
 
     fetch(
-      'https://api.themoviedb.org/3/movie/popular?language=en-US&page=1',
+      'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1',
       options
     )
       .then((response) => response.json())
@@ -32,8 +33,7 @@ export default function topMovie() {
       .then((data) => setGenres(data.genres))
       .catch((err) => console.error(err));
   }, []);
-  console.log(movies);
-  console.log(genres);
+ 
   return (
     <>
       <div className='intro'>
@@ -52,7 +52,8 @@ export default function topMovie() {
           const releaseYear = new Date(movie.release_date).getFullYear();
           return (
             <div key={movie.id} className='posterHolder'>
-              <img
+              <Link to={`/movies/${movie.id}`}>
+               <img
                 src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                 alt={movie.title}
                 width={250}
@@ -60,7 +61,8 @@ export default function topMovie() {
                 p={5}
                 data-testid: movie-poster
               />
-              
+              </Link>
+            
               <span data-testid: movie-release-date className='yearRelease'>
                 <p>USA,</p>
                 <h4>{releaseYear}</h4>
