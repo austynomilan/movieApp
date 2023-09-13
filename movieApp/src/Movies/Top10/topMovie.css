@@ -1,0 +1,71 @@
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1308px;
+  margin: 2rem auto;
+  font-family: "DM Sans";
+}
+.intro h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
+.intro span {
+  display: flex;
+  align-items: center;
+}
+.intro span p {
+  font-size: 18px;
+  color: #be123c;
+  font-weight: 400;
+  margin-right: 5px;
+}
+
+.card {
+  width: 1308px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.card .posterHolder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "DM Sans";
+  height: 490px;
+}
+.card .posterHolder .yearRelease {
+  display: flex;
+  font-size: 12px;
+  color: #9CA3AF;
+  margin: 2px 0;
+}
+.card .posterHolder .yearRelease p {
+  margin-right: 2px;
+}
+.card .posterHolder span {
+  width: 250px;
+  font-size: 18px;
+  flex-wrap: wrap;
+}
+.card .posterHolder span P {
+  font-weight: 700;
+}
+.card .posterHolder .userGenerated {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 0.8rem 0;
+}
+.card .posterHolder .userGenerated .avgCount {
+  display: flex;
+  align-items: center;
+}
+.card .posterHolder .userGenerated .avgCount img {
+  margin-right: 5px;
+}
+.card .posterHolder .genre {
+  color: #9ca3af;
+  font-size: 12px;
+}/*# sourceMappingURL=topMovie.css.map */
