@@ -9,4 +9,15 @@
      object-fit: cover;
   flex-shrink: 0;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(<path-to-image>), lightgray 50%/cover no-repeat;
+}
+
+@media screen and (max-width: 600px) {
+  .posterContainer {
+    overflow: hidden;
+    width: auto;
+  }
+  .posterContainer img {
+    height: 300px;
+    width: auto;
+  }
 }/*# sourceMappingURL=poster.css.map */

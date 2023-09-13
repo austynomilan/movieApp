@@ -34,4 +34,28 @@
 .base span p {
   font-weight: 700;
   font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+  .base {
+    width: 100%;
+    margin: auto;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 2rem;
+  }
+  .base ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .base ul li {
+    margin-bottom: 10px;
+  }
+  .base span {
+    width: auto;
+    margin-left: 0;
+  }
+  .base span p {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=footer.css.map */

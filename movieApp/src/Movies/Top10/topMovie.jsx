@@ -35,7 +35,7 @@ export default function topMovie() {
   }, []);
  
   return (
-    <>
+    <div className='mainContainer'>
       <div className='intro'>
         <h1>Featured Movie</h1>
         <span>
@@ -56,6 +56,7 @@ export default function topMovie() {
                <img
                 src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                 alt={movie.title}
+                className='posterImage'
                 width={250}
                 height={370}
                 p={5}
@@ -88,6 +89,6 @@ export default function topMovie() {
         })}
       </div>
       <Footer />
-    </>
+    </div>
   );
 }

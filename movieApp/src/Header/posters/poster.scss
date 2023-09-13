@@ -9,3 +9,14 @@
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(<path-to-image>), lightgray 50% / cover no-repeat;
     } 
 }
+
+@media screen and (max-width: 600px) {
+    .posterContainer {
+        overflow: hidden;
+        width: auto;
+      img {
+        height: 300px;
+        width: auto;
+      }
+    }
+  }

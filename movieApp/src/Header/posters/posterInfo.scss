@@ -52,3 +52,14 @@
         border-radius: 6px;
   }
 }
+
+@media screen and (max-width: 600px) {
+.posterInfo_container{
+  top: 2.5rem;
+  left: 2rem;
+  width: 200px;
+  h1{
+    font-size: 20px;
+  }
+}
+}

@@ -33,17 +33,18 @@
     flex-direction: column;
     align-items: center;
     font-family: 'DM Sans';
+    width: 350px;
     height: 490px;
 
-.yearRelease{
-  display: flex;
-  font-size: 12px;
-  color: #9CA3AF;
-  margin: 2px 0;
-  p{
-    margin-right: 2px;
-  }
-}
+    .yearRelease {
+      display: flex;
+      font-size: 12px;
+      color: #9ca3af;
+      margin: 2px 0;
+      p {
+        margin-right: 2px;
+      }
+    }
 
     span {
       width: 250px;
@@ -73,3 +74,35 @@
     }
   }
 }
+
+@media screen and (max-width: 600px) {
+  .mainContainer {
+    width: 100%;
+    box-sizing: border-box;
+
+    .intro {
+      width: 80%;
+    }
+    .card {
+      display: grid;
+      grid-template-columns: repeat(1, minmax(450px, 1fr));
+      padding: 10px;
+      justify-content: center;
+      align-items: center;
+      .posterHolder {
+        height: auto;
+        .posterImage {
+          max-width: none;
+          height: auto;
+        }
+        .userGenerated {
+          width: auto;
+          .avgCount {
+           padding: 0 3.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -35,3 +35,31 @@
     }
     }
 }
+
+@media screen and (max-width: 600px) {
+    .base {
+      width: 100%;
+      margin: auto;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-top: 2rem;
+  
+      ul {
+        flex-direction: column;
+        align-items: flex-start;
+  
+        li {
+          margin-bottom: 10px;
+        }
+      }
+  
+      span {
+        width: auto;
+        margin-left: 0;
+  
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
