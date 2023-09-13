@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './topMovie.scss';
-import MovieCard from '../../assets/icons/MovieCard.png';
+import MovieCard from '../../assets/icons/movieCard.png';
 import { FaGreaterThan } from 'react-icons/fa';
 import Footer from '../../Footer/footer';
 import Fruit from '../../assets/icons/fruit.png';
