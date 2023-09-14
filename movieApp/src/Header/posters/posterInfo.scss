@@ -61,5 +61,31 @@
   h1{
     font-size: 20px;
   }
+  .ugc{
+    width: 90px;
+    .branding {
+      img {
+      width: 1.5rem;
+      height: 16px;
+    }
+  }
+  .userClicks {
+  img {
+    height: 17px;
+    width: 1rem;
+    margin-left: .5rem;
+  }
+}
+  }
+  .text_detail{
+    width: 202px;
+    font-size: 10px;
+    margin-bottom: .2rem;
+  }
+  button{
+       width: 90px;
+       padding: 3px 8px 3px 8px;
+       font-size: 8px;
+ }
 }
 }

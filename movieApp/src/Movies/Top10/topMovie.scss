@@ -1,3 +1,7 @@
+.mainContainer{
+  max-width: 100%;
+  padding: 0 2rem;
+  overflow-x: hidden;
 .intro {
   display: flex;
   align-items: center;
@@ -22,15 +26,13 @@
 }
 
 .card {
-  max-width: auto;
-  margin: 0 1rem 0 -1rem;
+  margin: 0 3rem 0 -4rem;
   display: grid;
-  overflow-x: hidden;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  grid-gap: 5px;
+  padding: 0 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap: 21px;
 
   .posterHolder {
-   
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,6 +41,7 @@
     height: 490px;
     .posterImage{
       width: 250px;
+      border-radius: 4px;
     }
     .yearRelease {
       display: flex;
@@ -61,14 +64,15 @@
 
     .userGenerated {
       display: flex;
-      max-width: auto;
+      max-width: 100%;
       justify-content: space-between;
-      margin: 0.8rem 1rem;
+      align-items: center;
+      margin: 0.8rem 0;
       .avgCount {
         display: flex;
         align-items: center;
-       
-        width: 100%;
+       margin: 0 3.5rem;
+    
         img {
           margin-right: 5px;
         }
@@ -80,7 +84,7 @@
     }
   }
 }
-
+}
 @media screen and (max-width: 600px) {
   .mainContainer {
     width: 100%;
@@ -88,6 +92,18 @@
 
     .intro {
       width: 80%;
+      h1{
+        font-size: 1rem;
+      }
+
+      span{
+        p{
+          font-size: 12px;
+        }
+        .greater{
+          font-size: 10px;
+        }
+      }
     }
     .card {
       display: grid;
@@ -95,6 +111,7 @@
       padding: 10px;
       justify-content: center;
       align-items: center;
+      font-size: 12px;
       .posterHolder {
         height: auto;
         margin: auto;
@@ -105,13 +122,12 @@
         }
         .userGenerated {
           width: auto;
+          
           .avgCount {
-           padding: 0 3.5rem;
+           margin: 0 3.5rem;
           }
         }
-        .yearRelease{
-          
-         }
+        
       }
     }
   }

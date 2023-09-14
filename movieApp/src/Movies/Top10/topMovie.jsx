@@ -40,7 +40,7 @@ export default function topMovie() {
         <h1>Featured Movie</h1>
         <span>
           <p>See more</p>
-          <FaGreaterThan color='#BE123C' />
+          <FaGreaterThan color='#BE123C' className='greater'/>
         </span>
       </div>
       <div data-testid: movie-card className='card'>
