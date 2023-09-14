@@ -22,20 +22,24 @@
 }
 
 .card {
-  width: 1308px;
-  margin: auto;
+  max-width: auto;
+  margin: 0 1rem 0 -1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  overflow-x: hidden;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   grid-gap: 5px;
 
   .posterHolder {
+   
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: 'DM Sans';
     width: 350px;
     height: 490px;
-
+    .posterImage{
+      width: 250px;
+    }
     .yearRelease {
       display: flex;
       font-size: 12px;
@@ -57,13 +61,13 @@
 
     .userGenerated {
       display: flex;
-      width: 90%;
+      max-width: auto;
       justify-content: space-between;
-      margin: 0.8rem 0;
+      margin: 0.8rem 1rem;
       .avgCount {
         display: flex;
         align-items: center;
-        justify-content: center;
+       
         width: 100%;
         img {
           margin-right: 5px;
@@ -93,8 +97,10 @@
       align-items: center;
       .posterHolder {
         height: auto;
+        margin: auto;
         .posterImage {
-          max-width: none;
+          max-width: 400px;
+          border-radius: 20px;
           height: auto;
         }
         .userGenerated {
@@ -103,6 +109,9 @@
            padding: 0 3.5rem;
           }
         }
+        .yearRelease{
+          
+         }
       }
     }
   }

@@ -57,9 +57,6 @@ export default function topMovie() {
                 src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                 alt={movie.title}
                 className='posterImage'
-                width={250}
-                height={370}
-                p={5}
                 data-testid: movie-poster
               />
               </Link>
