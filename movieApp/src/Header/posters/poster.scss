@@ -13,10 +13,15 @@
     .posterContainer {
         overflow: hidden;
         width: auto;
+        position: relative;
       img {
-        height: 200px;
+        height: 250px;
         object-fit: contain;
         width: auto;
+      }
+      .Hamburger{
+        background-color: transparent;
+        position: absolute;
       }
     }
   }
