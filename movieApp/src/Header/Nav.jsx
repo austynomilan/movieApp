@@ -4,7 +4,7 @@ import {FaEquals, FaSearch, FaTimes, FaBars} from "react-icons/fa"
 import './nav.scss'
 
 export default function nav() {
-  const [showNav, setShowNav] = useState(true)
+  const [showNav, setShowNav] = useState(false)
   const handleToggleNav = () => {
     setShowNav(!showNav);
   };
