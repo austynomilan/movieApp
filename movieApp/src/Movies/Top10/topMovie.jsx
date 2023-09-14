@@ -35,6 +35,7 @@ export default function topMovie() {
   }, []);
  
   return (
+    <>
     <div className='mainContainer'>
       <div className='intro'>
         <h1>Featured Movie</h1>
@@ -85,7 +86,10 @@ export default function topMovie() {
           );
         })}
       </div>
-      <Footer />
+     
     </div>
+     <Footer />
+    </>
+    
   );
 }
