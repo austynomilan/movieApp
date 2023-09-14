@@ -3,7 +3,7 @@
     position: relative;
    img{
     max-width: auto;
-    object-fit: cover;
+    object-fit: contain;
     flex-shrink: 0;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(<path-to-image>), lightgray 50% / cover no-repeat;
     } 
@@ -14,7 +14,8 @@
         overflow: hidden;
         width: auto;
       img {
-        height: 300px;
+        height: 200px;
+        object-fit: contain;
         width: auto;
       }
     }
