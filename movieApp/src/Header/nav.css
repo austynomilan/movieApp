@@ -93,6 +93,9 @@
     height: 20px;
     top: -0.5rem;
   }
+  .navContainer .active {
+    display: none;
+  }
   .navContainer .menuSection {
     width: 100%;
     position: fixed;

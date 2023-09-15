@@ -4,7 +4,7 @@ import {FaEquals, FaSearch, FaTimes, FaBars} from "react-icons/fa"
 import './nav.scss'
 
 export default function nav() {
-  const [showNav, setShowNav] = useState(false)
+  const [showNav, setShowNav] = useState(true)
   const handleToggleNav = () => {
     setShowNav(!showNav);
   };
@@ -16,20 +16,19 @@ export default function nav() {
       <section className='logoSection'>
         <img src={Logo} alt="Logo" />
       </section>
-      <section className='searchSection'>
+      <section className='searchSection '>
         <input type="text" name="search" id="" placeholder='What do you want to watch?' autoFocus/>
         <span><FaSearch/></span>
       </section>
       
-      {!showNav && (
-  <section className='menuSection'>
+  <section className={`menuSection ${showNav ? 'active' : ''}`}>
     <span>Sign in</span>
     <FaEquals className='img' />
   </section>
-)}
+
       
       <div className='mobile' onClick={handleToggleNav}>
-          {showNav ? <FaBars className='response'/> : <FaTimes className='response'/>}
+          {showNav ? <FaBars  className='response'/> : <FaTimes className='response'/>}
         </div>
       </div> 
       
