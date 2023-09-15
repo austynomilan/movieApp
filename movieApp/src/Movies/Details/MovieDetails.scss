@@ -103,6 +103,7 @@
       span {
         display: flex;
         align-items: flex-end;
+        max-width: 100%;
         .genreStle {
           list-style: none;
           font-weight: 700;
@@ -188,9 +189,10 @@
       font-size: 12px;
       span{
         font-size: 8px;
-        width: 2000px;
-        margin-left: 0rem;
-      }
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+     }
     }
   }
 }
