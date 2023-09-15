@@ -5,7 +5,7 @@ A movie discovery web application that allows users to search for movies, view d
 ***
 Do the following:
 ```
-$ git git@github.com:austynomilan/movieApp.git
+$ git https://github.com/austynomilan/movieApp.git
 $ cd ../path/to/the/file
 $ npm install
 $ npm run dev
