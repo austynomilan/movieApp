@@ -1,7 +1,7 @@
 # movieApp
 A movie discovery web application that allows users to search for movies, view details about them, and save their favorite movies. You’ll be consuming data from the TMDB API.
 
-##STEPS TO RUN APP LOCALLY
+## STEPS TO RUN APP LOCALLY
 ***
 Do the following:
 ```
