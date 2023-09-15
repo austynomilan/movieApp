@@ -54,11 +54,36 @@
 
 @media screen and (max-width: 600px) {
   .posterInfo_container {
-    top: 2.5rem;
+    top: 4.5rem;
     left: 2rem;
-    width: 200px;
+    width: 170px;
   }
   .posterInfo_container h1 {
-    font-size: 20px;
+    font-size: 16px;
+  }
+  .posterInfo_container .ugc {
+    width: 90px;
+  }
+  .posterInfo_container .ugc p {
+    font-size: 12px;
+  }
+  .posterInfo_container .ugc .branding img {
+    width: 1.5rem;
+    height: 16px;
+  }
+  .posterInfo_container .ugc .userClicks img {
+    height: 17px;
+    width: 1rem;
+    margin-left: 0.5rem;
+  }
+  .posterInfo_container .text_detail {
+    width: 202px;
+    font-size: 10px;
+    margin-bottom: -1rem;
+  }
+  .posterInfo_container button {
+    width: 90px;
+    padding: 3px 8px 3px 8px;
+    font-size: 8px;
   }
 }/*# sourceMappingURL=posterInfo.css.map */
