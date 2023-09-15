@@ -72,11 +72,10 @@ export default function MovieDetails() {
   const releaseDate = new Date(movie.release_date);
 
   const options = { timeZone: 'UTC' };
-  const formattedDate = releaseDate.toLocaleString('en-US', options);
+  const formattedDate = releaseDate.toLocaleDateString('en-US', options);
 
-  const runTime = movie.runtime;
-  const hours = Math.floor(runTime / 60);
-  const minutes = runTime % 60;
+  
+  
 
   const voteCount = movie.vote_count
   const count = Math.floor(voteCount / 1000)
@@ -114,8 +113,6 @@ export default function MovieDetails() {
           <img
             src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
             alt={movie.title}
-            
-           
           />
         </div>
 
@@ -125,7 +122,7 @@ export default function MovieDetails() {
               <h4 data-testid= "movie-title">{movie.title}</h4>
               <ul>
                 <li data-testid= "movie-release-date">{formattedDate}</li>
-                <li data-testid= "movie-runtime">{`${hours}h ${minutes}m`}</li>
+                <li data-testid= "movie-runtime">{movie.runtime}<span>m</span></li>
                 
               </ul>
               {genreNames.map((genre, index) => (

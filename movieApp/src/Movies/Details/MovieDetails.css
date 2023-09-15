@@ -94,6 +94,9 @@
   max-width: 100%;
   height: 40vh;
 }
+.mvDetails .movieDetails .movieText .eventTime li[data-testid=movie-runtime] {
+  display: flex;
+}
 .mvDetails .movieDetails .movieText .eventTime span {
   display: flex;
   align-items: flex-end;
