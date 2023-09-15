@@ -80,8 +80,7 @@
   border: 0;
 }
 .mvDetails .movieDetails {
-  max-width: auto;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 .mvDetails .movieDetails .imageContainer {
   max-width: 100%;
@@ -114,7 +113,6 @@
 }
 .mvDetails .movieDetails .movieText .eventTime span .rating {
   display: flex;
-  margin-left: 20rem;
   align-items: center;
 }
 .mvDetails .movieDetails .movieText .eventTime span .rating p {
@@ -135,7 +133,6 @@
 
 @media screen and (max-width: 600px) {
   .mvDetails {
-    border: 3px solid black;
     max-width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -181,7 +178,7 @@
     width: 300px;
   }
   .mvDetails .movieDetails .movieText {
-    width: 400px;
+    width: 350px;
     font-size: 12px;
     margin-top: 5rem;
   }
