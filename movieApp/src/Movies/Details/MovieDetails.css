@@ -140,58 +140,63 @@
   .mvDetails {
     width: 100%;
     height: auto;
-    overflow-x: hidden;
+    overflow: hidden;
   }
   .mvDetails .imageContainer {
     max-width: auto;
-    margin-bottom: -2.5rem;
+    margin-bottom: -0.5rem;
   }
   .mvDetails .sidebar {
-    width: 123px;
+    width: 83px;
     height: 100vh;
     position: fixed;
   }
   .mvDetails .sidebar .logo img {
-    width: 70px;
-    -moz-column-gap: 2px;
-         column-gap: 2px;
+    width: 50px;
     position: absolute;
     top: 0.5rem;
   }
   .mvDetails .sidebar .logo .logo1 {
-    left: 2rem;
+    left: 1.5rem;
     top: 0.7rem;
   }
   .mvDetails .sidebar .quiz {
-    width: 6rem;
+    width: 4rem;
   }
   .mvDetails .sidebar .quiz h5 {
-    font-size: 10px;
+    font-size: 5px;
     margin-top: -1.5rem;
   }
   .mvDetails .sidebar .quiz p {
-    font-size: 10px;
+    font-size: 8px;
   }
   .mvDetails .sidebar .quiz button {
-    padding: 1px 4px;
-    font-size: 9px;
+    padding: 1px 3px;
+    font-size: 4px;
   }
   .mvDetails .Logout button {
     margin-top: -1rem;
   }
   .mvDetails .movieDetails {
     position: absolute;
-    left: 8rem;
+    left: 6rem;
     width: 300px;
   }
   .mvDetails .movieDetails .movieText {
     width: 400px;
     font-size: 12px;
+    margin-top: 5rem;
   }
-  .mvDetails .movieDetails .movieText span {
+  .mvDetails .movieDetails .movieText .eventTime {
+    width: 70%;
+  }
+  .mvDetails .movieDetails .movieText .eventTime span {
     font-size: 8px;
-    width: 100%;
+    width: 80%;
     flex-direction: column;
     align-items: flex-start;
+  }
+  .mvDetails .movieDetails .movieText .eventTime .rating {
+    margin-left: 0;
   }
 }/*# sourceMappingURL=MovieDetails.css.map */
