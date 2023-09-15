@@ -71,7 +71,7 @@ export default function topMovie() {
                 src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                 alt={movie.title}
                 className='posterImage'
-                data-testid: movie-poster
+                data-testid = "movie-poster"
               />
               </Link>
               <span>
