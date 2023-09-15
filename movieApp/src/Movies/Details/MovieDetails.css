@@ -137,6 +137,8 @@
 @media screen and (max-width: 600px) {
   .mvDetails {
     width: 100%;
+    height: auto;
+    overflow-x: hidden;
   }
   .mvDetails .sidebar {
     width: 123px;
@@ -174,6 +176,7 @@
   .mvDetails .movieDetails {
     position: absolute;
     left: 8rem;
+    width: 300px;
   }
   .mvDetails .movieDetails .movieText {
     width: 400px;
