@@ -122,10 +122,10 @@ export default function MovieDetails() {
         <div className='movieText'>
           <section className='eventTime'>
             <span>
-              <h4 data-testid: "movie-title">{movie.title}</h4>
+              <h4 data-testid= "movie-title">{movie.title}</h4>
               <ul>
-                <li data-testid: "movie-release-date">{formattedDate}</li>
-                <li data-testid: "movie-runtime">{`${hours}h ${minutes}m`}</li>
+                <li data-testid= "movie-release-date">{formattedDate}</li>
+                <li data-testid= "movie-runtime">{`${hours}h ${minutes}m`}</li>
                 
               </ul>
               {genreNames.map((genre, index) => (
@@ -139,7 +139,7 @@ export default function MovieDetails() {
             </section>
             </span>
             
-            <p data-testid: "movie-overview">{movie.overview}</p>
+            <p data-testid= "movie-overview">{movie.overview}</p>
           </section>
         </div>
       </div>
