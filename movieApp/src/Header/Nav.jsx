@@ -17,7 +17,7 @@ export default function nav() {
         <img src={Logo} alt="Logo" />
       </section>
       <section className='searchSection '>
-        <input type="text" name="search" id="" placeholder='What do you want to watch?' autoFocus/>
+        <input type="text" name="search" placeholder='What do you want to watch?' autoFocus/>
         <span><FaSearch/></span>
       </section>
       

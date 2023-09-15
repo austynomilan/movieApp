@@ -44,6 +44,18 @@
   width: 250px;
   border-radius: 4px;
 }
+.mainContainer .card .posterHolder .fav {
+  position: relative;
+}
+.mainContainer .card .posterHolder .fav .favorite {
+  position: absolute;
+  left: 10px;
+  top: 2px;
+  color: #be123c;
+  height: 40px;
+  width: 40px;
+  transition: 3s ease-in-out;
+}
 .mainContainer .card .posterHolder .yearRelease {
   display: flex;
   font-size: 12px;

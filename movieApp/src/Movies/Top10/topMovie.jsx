@@ -2,13 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './topMovie.scss';
 import MovieCard from '../../assets/icons/movieCard.png';
-import { FaGreaterThan } from 'react-icons/fa';
+import { FaGreaterThan} from 'react-icons/fa';
+import {  MdFavorite, MdOutlineFavoriteBorder } from 'react-icons/md';
 import Footer from '../../Footer/footer';
 import Fruit from '../../assets/icons/fruit.png';
 
 export default function topMovie() {
   const [movies, setMovies] = useState([]);
   const [genres, setGenres] = useState([]);
+  const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
     const options = {
@@ -34,6 +36,16 @@ export default function topMovie() {
       .catch((err) => console.error(err));
   }, []);
  
+  const toggleFavorite = (movieId) => {
+    setFavorites((prevFavorites) => {
+      if (prevFavorites.includes(movieId)) {
+        return prevFavorites.filter((id) => id !== movieId);
+      } else {
+        return [...prevFavorites, movieId];
+      }
+    });
+  };
+
   return (
     <>
     <div className='mainContainer'>
@@ -53,6 +65,7 @@ export default function topMovie() {
           const releaseYear = new Date(movie.release_date).getFullYear();
           return (
             <div key={movie.id} className='posterHolder'>
+            <div className='fav'>
               <Link to={`/movies/${movie.id}`}>
                <img
                 src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
@@ -61,7 +74,20 @@ export default function topMovie() {
                 data-testid: movie-poster
               />
               </Link>
-            
+              <span>
+              {favorites.includes(movie.id) ? (
+                    <MdFavorite
+                      onClick={() => toggleFavorite(movie.id)}
+                      className='favorite '
+                    />
+                  ) : (
+                    <MdOutlineFavoriteBorder
+                      onClick={() => toggleFavorite(movie.id)}
+                      className='favorite '
+                    />
+                  )}
+              </span>
+            </div>
               <span data-testid: movie-release-date className='yearRelease'>
                 <p>USA,</p>
                 <h4>{releaseYear}</h4>
