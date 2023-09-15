@@ -56,7 +56,7 @@ export default function topMovie() {
           <FaGreaterThan color='#BE123C' className='greater'/>
         </span>
       </div>
-      <div data-testid: "movie-card" className='card'>
+      <div data-testid="movie-card" className='card'>
         {movies.map((movie) => {
           const genreNames = movie.genre_ids.map((genreId) => {
             const genre = genres.find((genre) => genre.id === genreId);
@@ -88,12 +88,12 @@ export default function topMovie() {
                   )}
               </span>
             </div>
-              <span data-testid: "movie-release-date" className='yearRelease'>
+              <span data-testid= "movie-release-date" className='yearRelease'>
                 <p>USA,</p>
                 <h4>{releaseYear}</h4>
               </span>
               <span>
-              <p data-testid: "movie-title">{movie.title}</p>
+              <p data-testid= "movie-title">{movie.title}</p>
               </span>
               <div className='userGenerated'>
                 <section className='avgCount'>
