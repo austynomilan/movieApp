@@ -88,8 +88,8 @@ export default function MovieDetails() {
     <div className='mvDetails'>
       <div className='sidebar'>
         <section className='logo'>
-          <img src={Logo} alt='logo' />
-          <img src={MovieBox} alt='movieBox' />
+          <img  src={Logo} alt='logo' />
+          <img className='logo1' src={MovieBox} alt='movieBox' />
         </section>
         <ul>
           <li>

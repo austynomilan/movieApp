@@ -17,20 +17,19 @@ export default function nav() {
         <img src={Logo} alt="Logo" />
       </section>
       <section className='searchSection'>
-        <input type="text" name="search" id="" placeholder='What do you want to watch?'/>
+        <input type="text" name="search" id="" placeholder='What do you want to watch?' autoFocus/>
         <span><FaSearch/></span>
       </section>
-      {showNav &&
-        <section className='menuSection'>
-        <span>Sign in</span>
-        <FaEquals 
-        className='img'
-        />
-      </section>
-      }
+      
+      {!showNav && (
+  <section className='menuSection'>
+    <span>Sign in</span>
+    <FaEquals className='img' />
+  </section>
+)}
       
       <div className='mobile' onClick={handleToggleNav}>
-          {showNav ? <FaTimes className='response'/> : <FaBars className='response'/>}
+          {showNav ? <FaBars className='response'/> : <FaTimes className='response'/>}
         </div>
       </div> 
       
