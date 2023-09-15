@@ -62,16 +62,16 @@ export default function topMovie() {
             const genre = genres.find((genre) => genre.id === genreId);
             return genre ? genre.name : '';
           });
-          const releaseYear = new Date(movie.release_date).getFullYear();
+          
           return (
             <div key={movie.id} className='posterHolder'>
             <div className='fav'>
               <Link to={`/movies/${movie.id}`}>
                <img
+                data-testid = "movie-poster"
                 src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                 alt={movie.title}
                 className='posterImage'
-                data-testid = "movie-poster"
               />
               </Link>
               <span>
@@ -88,9 +88,9 @@ export default function topMovie() {
                   )}
               </span>
             </div>
-              <span data-testid= "movie-release-date" className='yearRelease'>
+              <span  className='yearRelease'>
                 <p>USA,</p>
-                <h4>{releaseYear}</h4>
+                <h4 data-testid= "movie-release-date">{movie.release_date}</h4>
               </span>
               <span>
               <p data-testid= "movie-title">{movie.title}</p>
